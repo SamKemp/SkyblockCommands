@@ -1,0 +1,7 @@
+name: SkyblockCommands
+main: pw.untamemadman.plugins.SkyBlockCommands
+version: ${version}
+commands:
+  skyblock:
+    description: The generic Skyblock command.
+    usage: /skyblock <start/restart>
