@@ -8,8 +8,8 @@ My new plugin designed for MultiCubeUK's Infinity Evolved Skyblock server.
 - A kit named "newisland" with started items for players when they create a new island
 
 # Commands:
-- /skyblock <start/restart>
-- /sb <start/restart>
+- /skyblock {start/restart}
+- /sb {start/restart}
  
 # Arguments:
 - start
