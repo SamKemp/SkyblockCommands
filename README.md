@@ -1,2 +1,2 @@
 # SkyblockCommands
-The custom commands for the MultiCubeUK Skyblock server
+My new plugin designed for MultiCubeUK's Infinity Evolved Skyblock server.
