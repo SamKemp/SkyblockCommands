@@ -5,3 +5,6 @@ commands:
   skyblock:
     description: The generic Skyblock command.
     usage: /skyblock <start/restart>
+  sb:
+    description: The generic Skyblock command.
+    usage: /skyblock <start/restart>
