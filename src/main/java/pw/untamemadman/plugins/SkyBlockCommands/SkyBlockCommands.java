@@ -14,6 +14,7 @@ public class SkyBlockCommands extends JavaPlugin {
 
     public static String prefix = "&7[&aMulti&cCube&5Uk&7]&b ";
     public static String message = "Transporting you to your new island";
+    public String PlayerName = "";
 
     @Override
     public void onEnable() {
@@ -28,15 +29,16 @@ public class SkyBlockCommands extends JavaPlugin {
         {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
+                PlayerName = player.getPlayerListName().toString();
                 if (args[0].equalsIgnoreCase("start")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is reset");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + ((Player) sender).getDisplayName().toString());
+                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 } else if (args[0].equalsIgnoreCase("restart")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is reset");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + ((Player) sender).getDisplayName().toString());
+                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 } else {
                     return false;
@@ -50,23 +52,28 @@ public class SkyBlockCommands extends JavaPlugin {
         {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
-                if (args[0].equalsIgnoreCase("start")) {
+                PlayerName = player.getPlayerListName().toString();
+                if (args[0].equalsIgnoreCase("start"))
+                {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is reset");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + ((Player) sender).getDisplayName().toString());
+                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 }
-                else if (args[0].equalsIgnoreCase("restart")) {
+                else if (args[0].equalsIgnoreCase("restart"))
+                {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is reset");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + ((Player) sender).getDisplayName().toString());
+                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 }
                 else
                 {
                     return false;
                 }
-            } else {
+            }
+            else
+            {
                 sender.sendMessage("This command can only be run by a player!");
                 return true;
             }
