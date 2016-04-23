@@ -1,5 +1,5 @@
 name: SkyblockCommands
-main: pw.untamemadman.plugins.SkyBlockCommands.SkyblockCommands
+main: pw.untamemadman.plugins.SkyBlockCommands.SkyBlockCommands
 version: ${version}
 commands:
   skyblock:
