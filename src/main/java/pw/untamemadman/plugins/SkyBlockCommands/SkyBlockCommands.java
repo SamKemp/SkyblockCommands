@@ -32,7 +32,7 @@ public class SkyBlockCommands extends JavaPlugin {
                 PlayerName = player.getPlayerListName().toString();
                 if (args[0].equalsIgnoreCase("start")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
-                    player.chat("/is reset");
+                    player.chat("/is spawn");
                     Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 } else if (args[0].equalsIgnoreCase("restart")) {
@@ -56,7 +56,7 @@ public class SkyBlockCommands extends JavaPlugin {
                 if (args[0].equalsIgnoreCase("start"))
                 {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
-                    player.chat("/is reset");
+                    player.chat("/is spawn");
                     Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 }
