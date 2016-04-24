@@ -27,23 +27,26 @@ public class SkyBlockCommands extends JavaPlugin {
         if (cmd.getName().equalsIgnoreCase("skyblock"))
         // If the player typed /skyblock then do the following...
         {
-            if (sender instanceof Player) {
+            if (sender instanceof Player)
+            {
                 Player player = (Player) sender;
                 PlayerName = player.getPlayerListName().toString();
                 if (args[0].equalsIgnoreCase("start")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is spawn");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
+                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland");
                     return true;
                 } else if (args[0].equalsIgnoreCase("restart")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
+                    player.chat("/is reset");
                     player.chat("/is reset");
                     Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
                 } else {
                     return false;
                 }
-            } else {
+            } else
+            {
                 sender.sendMessage("This command can only be run by a player!");
                 return true;
             }
@@ -57,12 +60,13 @@ public class SkyBlockCommands extends JavaPlugin {
                 {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is spawn");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
+                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland");
                     return true;
                 }
                 else if (args[0].equalsIgnoreCase("restart"))
                 {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
+                    player.chat("/is reset");
                     player.chat("/is reset");
                     Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland " + PlayerName);
                     return true;
