@@ -6,7 +6,7 @@
 
     <groupId>pw.untamemadman.plugins</groupId>
     <artifactId>SkyBlock_Commands</artifactId>
-    <version>5.0</version>
+    <version>5.1</version>
 
     <build>
         <plugins>

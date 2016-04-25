@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 /**
  * Created by untamemadman on 22/04/2016.
  */
+
 public class SkyBlockCommands extends JavaPlugin {
 
     public static String prefix = "&7[&aMulti&cCube&5Uk&7]&b ";
@@ -27,7 +28,8 @@ public class SkyBlockCommands extends JavaPlugin {
     public String Help8 = "&a/sb biomelist&r &l-&r Shows a list of allowed biomes for setbiome";
 
     @Override
-    public void onEnable() {
+    public void onEnable()
+    {
         this.getCommand("skyblock").setExecutor(this);
     }
 
@@ -44,7 +46,7 @@ public class SkyBlockCommands extends JavaPlugin {
                 {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + message));
                     player.chat("/is spawn");
-                    Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "kit newisland");
+                    player.chat("/kit newisland");
                     return true;
                 }
                 else if (args[0].equalsIgnoreCase("restart"))
